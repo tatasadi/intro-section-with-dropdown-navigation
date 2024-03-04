@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Epilogue } from "next/font/google"
 import "./globals.css"
 import Attribution from "./components/Attribution"
+import Header from "./components/header"
 
 const epilogue = Epilogue({ subsets: ["latin"] })
 
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${epilogue.className} bg-almost-white text-almost-black flex min-h-screen flex-col items-center`}
       >
+        <Header />
         {children}
         <Attribution />
       </body>
