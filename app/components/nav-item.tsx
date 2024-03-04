@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { cn } from "../lib/utils"
 import Image from "next/image"
 
@@ -22,10 +22,27 @@ const NavItem = ({
   childrenLeftPosition?: string
 }) => {
   const [isChildrenOpen, setIsChildrenOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
-  const toggleChildren = () => {
-    setIsChildrenOpen(!isChildrenOpen)
-  }
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)")
+    if (!mediaQuery.matches) setIsChildrenOpen(true)
+
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        mediaQuery.matches &&
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsChildrenOpen(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [dropdownRef])
 
   return (
     <li className={cn("text-medium-gray leading-[1.625rem]", className)}>
@@ -33,7 +50,7 @@ const NavItem = ({
         <div className="md:relative">
           <div
             className="flex cursor-pointer items-center gap-4"
-            onClick={toggleChildren}
+            onMouseEnter={() => setIsChildrenOpen(true)}
           >
             <span className="hover:text-almost-black cursor-pointer md:text-sm">
               {text}
@@ -49,6 +66,7 @@ const NavItem = ({
           </div>
           {isChildrenOpen && (
             <div
+              ref={dropdownRef}
               className={cn(
                 "md:absolute md:top-6 md:rounded-[0.625rem] md:bg-white md:shadow-[0_10px_40px_0_rgba(0,0,0,0.15)]",
                 childrenLeftPosition,

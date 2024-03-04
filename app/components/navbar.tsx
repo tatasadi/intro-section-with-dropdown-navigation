@@ -58,7 +58,7 @@ const Navbar = () => {
           <NavItem
             text="Login"
             href="#"
-            className="ml-auto mt-4 text-center md:mt-0"
+            className="mt-4 text-center md:ml-auto md:mt-0"
           />
           <NavItem
             text="Register"
