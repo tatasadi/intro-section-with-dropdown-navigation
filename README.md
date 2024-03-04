@@ -1,6 +1,6 @@
 # Intro section with dropdown navigation
 
-This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -28,8 +28,16 @@ Users should be able to:
 
 ### Screenshots
 
+Desktop:
+
 ![](./screenshot1.png)
+
+Mobile:
+
 ![](./screenshot2.png)
+
+Mobile Navbar:
+![](./screenshot3.png)
 
 ### Links
 
@@ -52,7 +60,7 @@ Users should be able to:
 
 ### Implementation time
 
-This challenge was completed over a span of 4 hours.
+This challenge was completed over a span of 3 hours.
 
 ## Author
 
