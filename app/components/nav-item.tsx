@@ -25,12 +25,8 @@ const NavItem = ({
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)")
-    if (!mediaQuery.matches) setIsChildrenOpen(true)
-
     function handleClickOutside(event: MouseEvent) {
       if (
-        mediaQuery.matches &&
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {

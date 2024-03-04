@@ -63,7 +63,7 @@ const Navbar = () => {
           <NavItem
             text="Register"
             href="#"
-            className="border-medium-gray rounded-[0.875rem] border-[1.5px] p-[0.81rem] text-center"
+            className="border-medium-gray rounded-[0.875rem] border-[1.5px] px-5 py-2 text-center"
           />
         </ul>
       </nav>
