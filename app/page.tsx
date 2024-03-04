@@ -21,12 +21,12 @@ export default function Home() {
           <Link
             href="#"
             aria-label="learn more"
-            className="bg-almost-black text-almost-white hover:bg-almost-white hover:text-almost-black hover:border-almost-black rounded-[0.9375rem] border border-transparent px-5 py-3 font-bold leading-[1.625rem] -tracking-[0.01388rem] md:px-8"
+            className="bg-almost-black text-almost-white hover:bg-almost-white hover:text-almost-black hover:border-almost-black rounded-[0.9375rem] border border-transparent px-5 py-3 font-bold leading-[1.625rem] -tracking-[0.01388rem] md:px-8 md:text-lg"
           >
             Learn more
           </Link>
         </div>
-        <div className="mx-4 grid grid-cols-4 gap-[1.8rem] md:mt-[7.5rem]">
+        <div className="mx-4 grid grid-cols-4 place-items-center gap-[1.8rem] md:mt-[7.5rem]">
           <Image src={clientDatabiz} alt="client-databiz" />
           <Image src={clientAudioPhile} alt="client-audiophile" />
           <Image src={clientMeet} alt="client-meet" />
